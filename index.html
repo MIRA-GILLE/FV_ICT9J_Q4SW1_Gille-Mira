@@ -13,17 +13,15 @@
 
 <p>Please fill out the following blanks to log in.</p>
 
-</details>
-
 <br>
 
 <label>Email:</label>
-<input type="email" id="email" class="form-control" placeholder="ex. iamyouremail@gmail.com">
+<input type="email" id="email" class="form-control" placeholder="Please input your email address here">
 
 <br>
 
 <label>Password:</label>
-<input type="password" id="password" class="form-control" placeholder="ex. iamyourpassword">
+<input type="password" id="password" class="form-control" placeholder="Please input your password here">
 
 <br>
 
@@ -36,20 +34,22 @@
        function checkLogIn() {
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
-
-        if (email === "ayokona@gmail.com" && password === "ayokonarin") {
-            alert("Welcome, user!");
+        
+        if (email === "ayokona@gmail.com" && password === "y0k0n4r1n") {
+        alert("Log in successful! Welcome back, Ayokona!");
+        } else if (email === "" || password === "") {
+        alert("Please fill in all fields.");
         } else {
-            alert("Invalid email or password. Please try again.");
-        }
 
+        alert("Log in failed. Incorrect email or password.");
+        }
     }
        function checkcheckoutboxID() {
         let checkbox = document.getElementById("checkoutboxID").checked;
     
         switch (checkbox) {
             case true:
-                alert("By selecting the checkbox, you have agreed to the terms and conditions.");
+                alert("By selecting the checkbox, you have agreed to save your details.");
                 break;
             case false:
                 alert("");    
